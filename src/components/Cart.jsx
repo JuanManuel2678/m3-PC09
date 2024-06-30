@@ -30,12 +30,13 @@ export const Cart = () => {
   return (
     <>
       <label 
-      className='cursor-pointer bg-[#09f] items-center rounded-full flex h-[32px] justify-center p-4 absolute right-4 top-4 w-[32px] z-90 transition-all' htmlFor={cartCheckboxId}>
+      className='cursor-pointer bg-blue-950 text-teal-50 rounded-md flex justify-center p-1 absolute right-4 top-4  h-[32px] w-[32px] z-90 transition-all ' htmlFor={cartCheckboxId}>
        <CartIcon />
       </label>
-      <input id={cartCheckboxId} type='checkbox' className='h-full block'/>
+      <input id={cartCheckboxId} type='checkbox'  className='peer hidden'/>
 
-      <aside className='flex flex-col border-2 border-black bg-blue-950/60 p-[32px] fixed right-0 top-0 w-[200px] m-2 rounded-lg'>
+      <aside className='border-2 border-black bg-blue-950/60 p-[32px] fixed right-0 top-0 w-[200px] m-2 rounded-lg hidden peer-checked:block place-items-center items-center'>
+
         <ul>
           <li className='border-b -1 border-black pb-[16px] text-white text-center' >
             <img src={`https://picsum.photos/id/5/200/300`} alt="phone" 
@@ -52,7 +53,8 @@ export const Cart = () => {
             </footer>
           </li>
         </ul>
-        <button className='bg-[grey]  flex justify-center px-2 rounded-lg'  >
+        
+        <button className='bg-blue-950 text-white border border-white flex justify-center rounded-lg m-2 hover:scale-110 mx-auto p-2'>
           <ClearCartIcon />
         </button>
       </aside>
