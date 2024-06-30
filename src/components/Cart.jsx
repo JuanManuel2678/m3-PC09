@@ -30,12 +30,12 @@ export const Cart = () => {
   return (
     <>
       <label 
-      className='cursor-pointer bg-[#09f] items-center rounded-full flex h-[32px] justify-center p-4 adsolute right-8 top-8 w-[32px] z-90' htmlFor={cartCheckboxId}>
+      className='cursor-pointer bg-[#09f] items-center rounded-full flex h-[32px] justify-center p-4 absolute right-4 top-4 w-[32px] z-90 transition-all' htmlFor={cartCheckboxId}>
        <CartIcon />
       </label>
-      <input id={cartCheckboxId} type='checkbox' />
+      <input id={cartCheckboxId} type='checkbox' className='h-full block'/>
 
-      <aside className='flex flex-col border-2 border-black bg-black p-[32px] fixed right-0 top-0 width-0 w-[200px]'>
+      <aside className='flex flex-col border-2 border-black bg-blue-950/60 p-[32px] fixed right-0 top-0 w-[200px] m-2 rounded-lg'>
         <ul>
           <li className='border-b -1 border-black pb-[16px] text-white text-center' >
             <img src={`https://picsum.photos/id/5/200/300`} alt="phone" 
@@ -48,7 +48,7 @@ export const Cart = () => {
               <small>
                 Qty : 1
               </small>
-              <button className='bg-white py-1 px-1 text-black' >+</button>
+              <button className='bg-white py-1 px-2 text-black rounded-full' >+</button>
             </footer>
           </li>
         </ul>
