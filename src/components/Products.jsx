@@ -16,7 +16,7 @@ export const Products = ({ products }) => {
               <strong>{item.title}</strong> - $ {item.price}
             </div>
             <div>
-              <button className='bg-[grey] px-2 py-2 rounded-lg mb-2 hover:bg-white hover:text-black' >
+              <button className='bg-blue-950  border-2 border-black px-2 py-2 rounded-lg mb-2 hover:bg-white hover:text-black' >
                 <AddToCartIcon />
               </button>
             </div>
