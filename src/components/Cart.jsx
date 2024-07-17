@@ -35,7 +35,7 @@ export const Cart = () => {
       </label>
       <input id={cartCheckboxId} type='checkbox'  className='peer hidden'/>
 
-      <aside className='border-2 border-black bg-blue-950/60 p-[32px] fixed right-0 top-0 w-[200px] m-2 rounded-lg hidden peer-checked:block place-items-center items-center'>
+      <aside className='border-2 border-black bg-blue-950/60 p-[32px] fixed right-0 top-0 w-[200px] h-full m-2 rounded-lg hidden peer-checked:block place-items-center items-center'>
 
         <ul>
           <li className='border-b -1 border-black pb-[16px] text-white text-center' >

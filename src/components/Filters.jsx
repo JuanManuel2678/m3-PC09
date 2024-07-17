@@ -37,12 +37,12 @@ export const Filters = () => {
         onChange={handleChangeMinPrice}
         value={filters.minPrice}
         />
-        <span>{filters.minPrice}</span>
+        <span> $ {filters.minPrice}</span>
       </div>
 
       <div className="shadow-inner flex gap-4  px-4 font-bold">
         <label htmlFor={caegoryFiltersId} className="text-center content-center">Categoria</label>
-        <select id={caegoryFiltersId} onChange={handleChangeCategory} className="w-[110px] text-center">
+        <select id={caegoryFiltersId} onChange={handleChangeCategory} className="w-[110px] text-center bg-blue-950">
           <option value="all">Todo</option>
           <option value="beauty">Belleza</option>
           <option value="fragrances">Perfume</option>
