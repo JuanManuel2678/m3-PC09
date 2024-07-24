@@ -3,6 +3,7 @@ import { useFilters } from "../Hook/useFilters"
 
 
 export const Filters = () => {
+  
   const { setFilters, filters } =  useFilters()
   
   const minPriceFilterId = useId()
@@ -40,9 +41,9 @@ export const Filters = () => {
         <span className="text-[#156a15] font-bold text-xl"> $ {filters.minPrice}</span>
       </div>
 
-      <div className="shadow-inner flex gap-4  px-4 font-bold">
+      <div className="shadow-inner flex gap-4  px-4 font-bold bg-">
         <label htmlFor={caegoryFiltersId} className="text-center content-center">Categoria</label>
-        <select id={caegoryFiltersId} onChange={handleChangeCategory} className="w-[110px] text-center ">
+        <select id={caegoryFiltersId} onChange={handleChangeCategory} className="w-[110px] text-center bg-gray-800  ">
           <option value="all">Todo</option>
           <option value="beauty">Belleza</option>
           <option value="fragrances">Perfume</option>

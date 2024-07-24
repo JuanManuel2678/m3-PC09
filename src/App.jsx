@@ -7,6 +7,7 @@ import { Cart } from "./components/Cart"
 
 
 function App() { 
+  
   const { filterProducts } = useFilters()
   const filteredProducts = filterProducts(initialProducts)
    
