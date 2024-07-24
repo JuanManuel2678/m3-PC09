@@ -2,25 +2,27 @@ import { AddToCartIcon } from "/public/Icons.jsx";
 
 export const Products = ({ products }) => {
   return (
-    <main className="w-full flex justify-center items-center">
-      <ul className="flex flex-wrap justify-around  content-center px-12 py-4 m-4 w-full">
+    <main className="w-full flex justify-center items-center ">
+      <ul className="flex flex-wrap justify-around content-center px-12 py-4 m-4 w-full">
         {products.slice(0, 15).map((item) => (
+          
           <li 
-          className='border-2 border-black flex flex-col items-center text-center justify-between w-[300px] h-[300px] m-2 rounded-lg bg-[#01022b] text-[#fff] shadow-2xl'
+          className=' flex flex-col items-center text-center justify-between w-[250px] h-[380px] m-2 rounded-xl bg-white shadow-box'
           key={item.id}>
             <img 
-            className='border-2 border-black h-[180px] mt-2 text-center rounded-xl object-cover block bg-white'
-            src={item.thumbnail} 
+            className='h-[230px] border-b-2 border-black/50 rounded-t-xl object-cover ' src={item.thumbnail} 
             alt={item.title} />
-            <div>
-              <strong>{item.title}</strong> - $ {item.price}
+            <div className="flex flex-col text-black">
+              <strong>{item.title}</strong>
+              <span className="text-[#156a15] font-bold ">$ {item.price}</span> 
             </div>
             <div>
-              <button className='bg-blue-950  border-2 border-black px-2 py-2 rounded-lg mb-2 hover:bg-white hover:text-black' >
+              <button className='  border-2 border-black px-1 py-1 rounded-lg mb-2 hover:bg-black hover:text-white' >
                 <AddToCartIcon />
               </button>
             </div>
           </li>
+
         ))}
       </ul>
     </main>
