@@ -27,7 +27,7 @@ export const Filters = () => {
   return (
     <section className=" flex gap-4  justify-center mt-8">
 
-      <div className=" flex gap-4 shadow-inner px-2 font-bold items-center">
+      <div className=" flex gap-4 shadow-inner px-2 font-bold items-center ">
         <label htmlFor={minPriceFilterId} className="py-2 px-3 ml-2 ">Precio</label>
         <input 
         type="range" 
@@ -37,12 +37,12 @@ export const Filters = () => {
         onChange={handleChangeMinPrice}
         value={filters.minPrice}
         />
-        <span> $ {filters.minPrice}</span>
+        <span className="text-[#156a15] font-bold text-xl"> $ {filters.minPrice}</span>
       </div>
 
       <div className="shadow-inner flex gap-4  px-4 font-bold">
         <label htmlFor={caegoryFiltersId} className="text-center content-center">Categoria</label>
-        <select id={caegoryFiltersId} onChange={handleChangeCategory} className="w-[110px] text-center bg-blue-950">
+        <select id={caegoryFiltersId} onChange={handleChangeCategory} className="w-[110px] text-center ">
           <option value="all">Todo</option>
           <option value="beauty">Belleza</option>
           <option value="fragrances">Perfume</option>
