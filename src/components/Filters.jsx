@@ -37,7 +37,7 @@ export const Filters = () => {
         max='20000'
         onChange={handleChangeMinPrice}
         value={filters.minPrice}
-        className="w-[25px] bg-gray-500"
+        className="h-[25px] bg-gray-500"
         />
         <span className="text-[#156a15] font-bold text-xl"> $ {filters.minPrice}</span>
       </div>

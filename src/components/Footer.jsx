@@ -1,7 +1,9 @@
+import { useCart } from "../Hook/useCart"
 import { useFilters } from "../Hook/useFilters"
 
 export const Footer = () => {
   const { filters  } = useFilters()
+  const { cart } = useCart()
 
   return (
 
@@ -13,6 +15,9 @@ export const Footer = () => {
 
       {
         JSON.stringify(filters, null, 2)
+      }
+      {
+        JSON.stringify(cart, null, 2)
       }
     </footer>
   )

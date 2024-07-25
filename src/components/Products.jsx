@@ -1,13 +1,26 @@
+
 import { AddToCartIcon } from "/public/Icons.jsx";
+import { RemoveFromCartIcon } from '/public/Icons.jsx'
+import { useCart } from "../Hook/useCart";
+
 
 export const Products = ({ products }) => {
 
-  
+  //  const { addToCart } = useCart()
+  const { addToCart, cart, removeFromCart } = useCart()
+
+  const checkProductIncard = product => {
+    return cart.some(item => item.id === product.id)
+  }
+
   return (
-    <main className="w-full flex justify-center items-center bg-gray-800">
+    <main className="w-full min-h-[1200px] flex justify-center items-center bg-gray-800">
 
       <ul className="flex flex-wrap justify-around content-center px-12 py-4 m-4 w-full">
-        {products.slice(0, 25).map((item) => (
+        {products.slice(0, 25).map((item) => { 
+          const isProductInCart = checkProductIncard(product)
+          
+          return (
           
           <li 
           className=' flex flex-col items-center text-center justify-between w-[220px] h-[300px] m-2 rounded-xl shadow-box bg-black p-4 text-white'
@@ -26,15 +39,25 @@ export const Products = ({ products }) => {
 
             <div className=" h-[15%] w-full flex justify-center content-center ">
 
-              <button className=' h-full border-2 border-gray-800 px-1 py-1 rounded-lg bg-gray-600 hover:bg-white hover:text-black' >
+              <button 
+              style={{backgroundColor: isProductInCart ? 'red' : 'blue'}}
+              onClick={() => {
+                isProductInCart 
+                ? removeFromCart(product)
+                : addToCart(product)
+              }}
+              className=' h-full border-2 border-gray-800 px-1 py-1 rounded-lg bg-gray-600 hover:bg-white hover:text-black  hover:scale-125' >
+                {
+                  isProductInCart 
+                  ? <RemoveFromCartIcon />
+                  : <AddToCartIcon />
+                }
                 <AddToCartIcon />
               </button>
 
             </div>
             
-          </li>
-
-        ))}
+          </li> ) })}
       </ul>
     </main>
   );
