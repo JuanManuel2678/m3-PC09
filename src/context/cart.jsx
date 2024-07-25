@@ -6,7 +6,7 @@ export const CartContext = createContext()
 // crear Provider 
 export const CartProvider = ({ children }) => {
 
-  const [cart, setCart] = useState([])
+  const [ cart, setCart] = useState([])
 
   // añadir al carrito
   const addToCart = product => {
@@ -30,7 +30,7 @@ export const CartProvider = ({ children }) => {
   
   // eliminar un producto 
   const removeFromCart = product => {
-    setCart(prevState => prevState.filter(item.id !== product.id))
+    setCart(prevState => prevState.filter(item => item.id !== product.id))
   }
   // limpiar carrito
   const clearCart = () => {

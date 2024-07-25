@@ -10,7 +10,7 @@ export const Cart = () => {
   function CartItem ({thumbnail, price, title, quantity, addToCart}) {
 
     return (
-      <li className=' w-[200px] h-[300px] flex flex-col justify-around mx-auto gap-2 border-b-[3px] border-b-gray-200 font-bold'>
+      <li className=' w-[200px] h-[300px] flex flex-col justify-around mx-auto gap-2 font-bold'>
 
       <figure className='rounded-lg h-[80%] w-full p-2 bg-gray-700/60 gap-2 flex flex-col'>
       <img src={thumbnail} alt="phone" 
@@ -42,9 +42,9 @@ export const Cart = () => {
       <input id={cartCheckboxId} type='checkbox'  className='peer hidden'/>
 
       <aside
-       className='border-2 border-black bg-black/60 p-2 fixed right-0 top-12 w-[240px] min-h-[1000px] m-2 rounded-lg hidden peer-checked:block'>
+       className='border-2 border-black bg-black/60 fixed p-2 right-0 top-12 w-[250px] max-h-[950px] overflow-y-auto m-2 rounded-lg hidden peer-checked:block'>
 
-        <ul className='flex justify-center w-[230px]'>
+        <ul className='flex flex-col gap-2 justify-center w-[230px] border-b-[3px] border-b-gray-200 pb-4'>
           {cart.map(product => (
             <CartItem key={product.id}
             addToCart={() => addToCart(product)} 
